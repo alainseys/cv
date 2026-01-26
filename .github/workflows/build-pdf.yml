@@ -10,20 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout the repository
       - uses: actions/checkout@v4
 
+      # 2. Install Node.js
       - name: Install Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # 3. Install Puppeteer
       - name: Install Puppeteer
         run: npm install puppeteer
 
+      # 4. Generate the PDF
       - name: Generate PDF
-        run: |
-          node generate-pdf.js
+        run: node generate-pdf.js
 
+      # 5. Commit and push the PDF back to main
       - name: Commit and Push PDF
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
