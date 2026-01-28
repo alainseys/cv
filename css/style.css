@@ -1,0 +1,136 @@
+    .skill {
+      margin-bottom: 10px;
+    }
+
+
+  .skill-name {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+
+  .skill-bar {
+    background: #eef2f7;
+    border-radius: 6px;
+    height: 8px;
+    overflow: hidden;
+  }
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+  .skill-percent {
+    color: #666;
+  }
+
+
+  .skill-level {
+    height: 100%;
+    background: #4f7cff;
+    border-radius: 6px;
+    transition: width 1s ease;
+  }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 40px;
+      background: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border-radius: 12px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      margin-top: 40px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 6px;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .contact {
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .section {
+      margin-top: 25px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .job {
+      margin-bottom: 25px;
+    }
+
+    .job-title {
+      font-weight: 600;
+    }
+
+    .job-period {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px 20px;
+    }
+
+    .tag {
+      background: #eef2f7;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 0;
+        border-radius: 0;
+      }
+    }
