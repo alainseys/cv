@@ -21,9 +21,17 @@ const fs = require("fs");
     document.getElementById('languageSelect').dispatchEvent(event);
   });
 
-  // Wait for content to switch
-  await page.waitForSelector('#dutch-content[style*="block"], #dutch-content:not([style*="none"])');
-  await page.waitForTimeout(500); // Extra delay for rendering
+  // Wait for content to switch - use waitForFunction instead of waitForTimeout
+  await page.waitForFunction(() => {
+    const dutchContent = document.getElementById('dutch-content');
+    const englishContent = document.getElementById('english-content');
+    return dutchContent.style.display === 'block' && englishContent.style.display === 'none';
+  }, { timeout: 5000 });
+
+  // Use setTimeout wrapped in page.evaluate for delay
+  await page.evaluate(() => {
+    return new Promise(resolve => setTimeout(resolve, 500));
+  });
 
   await page.pdf({
     path: "cv-nl.pdf",
@@ -47,8 +55,16 @@ const fs = require("fs");
   });
 
   // Wait for content to switch
-  await page.waitForSelector('#english-content[style*="block"], #english-content:not([style*="none"])');
-  await page.waitForTimeout(500); // Extra delay for rendering
+  await page.waitForFunction(() => {
+    const dutchContent = document.getElementById('dutch-content');
+    const englishContent = document.getElementById('english-content');
+    return dutchContent.style.display === 'none' && englishContent.style.display === 'block';
+  }, { timeout: 5000 });
+
+  // Use setTimeout wrapped in page.evaluate for delay
+  await page.evaluate(() => {
+    return new Promise(resolve => setTimeout(resolve, 500));
+  });
 
   await page.pdf({
     path: "cv-en.pdf",
