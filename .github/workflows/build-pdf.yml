@@ -25,7 +25,7 @@ jobs:
 
       # 4. Generate the PDF
       - name: Generate PDF
-        run: node generate-pdf.js
+        run: node js/generate-pdf.js
 
       # 5. Commit and push the PDF back to main
       - name: Commit and Push PDF

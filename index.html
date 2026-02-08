@@ -4,253 +4,466 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alain Seys – Systems Engineer</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Base styles */
+  </style>
 </head>
 
 <body>
   <div class="container">
+    
+    <!-- Language Selector -->
+    <div class="language-selector">
+      <select id="languageSelect" class="language-dropdown">
+        <option value="nl">Nederlands (Dutch)</option>
+        <option value="en">English</option>
+      </select>
+    </div>
 
-    <header>
-      <img src="images/1751295986101.jpg" height="200" width="175">
-      <h1>Alain Seys</h1>
-      <div class="subtitle">Systems Engineer</div>
+    <!-- Dutch Version -->
+    <div id="dutch-content" class="lang-nl">
+      <header>
+        <img src="images/1751295986101.jpg" height="200" width="175" alt="Alain Seys">
+        <h1>Alain Seys</h1>
+        <div class="subtitle">Systems Engineer</div>
 
-      <div class="contact">
-        Zarren, België · +32 470 38 02 64 ·
-        <a href="mailto:alain.seys@outlook.com">alain.seys@outlook.com</a> ·
-        <a href="https://www.linkedin.com/in/alainseys/" target="_blank">LinkedIn</a>
-      </div>
-      <div class="contact">
-        Alleenstaand · Dochter 8 Jaar · Rijbewijs B
-      </div>
-    </header>
+        <div class="contact">
+          Zarren, België · +32 470 38 02 64 ·
+          <a href="mailto:alain.seys@outlook.com">alain.seys@outlook.com</a> ·
+          <a href="https://www.linkedin.com/in/alainseys/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="contact">
+          Alleenstaand · Dochter 8 Jaar · Rijbewijs B
+        </div>
+      </header>
 
-    <section class="section">
-      <h2>Profiel</h2>
-      <p>
-        IT/System Engineer met een sterke passie voor infrastructuur, automatisering en security.
-        Ruime ervaring met Linux-, Windows- en virtualisatie-omgevingen, met focus op standaardisatie,
-        tooling en moderne DevOps-principes. Gedreven om omgevingen schaalbaar, veilig en onderhoudbaar te maken.
-      </p>
-    </section>
+      <section class="section">
+        <h2>Profiel</h2>
+        <p>
+          IT/System Engineer met een sterke passie voor infrastructuur, automatisering en security.
+          Ruime ervaring met Linux-, Windows- en virtualisatie-omgevingen, met focus op standaardisatie,
+          tooling en moderne DevOps-principes. Gedreven om omgevingen schaalbaar, veilig en onderhoudbaar te maken.
+        </p>
+      </section>
 
-    <section class="section">
-      <h2>Vaardigheden</h2>
+      <section class="section">
+        <h2>Vaardigheden</h2>
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-header"><span>Linux</span><span class="skill-percent">90%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Ansible</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Docker</span><span class="skill-percent">80%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Linux Hardening</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:75%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Windows Server</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Active Directory / Azure AD</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>SQL</span><span class="skill-percent">60%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>3 Tier administration</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>VMware</span><span class="skill-percent">80%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Hyper-V</span><span class="skill-percent">70%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Proxmox</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Python</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>C#</span><span class="skill-percent">55%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:55%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>PowerShell</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:45%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>NetBox</span><span class="skill-percent">70%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Storage (VNX, PowerStore)</span><span class="skill-percent">70%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Zero Trust</span><span class="skill-percent">65%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Office 365</span><span class="skill-percent">80%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>SharePoint</span><span class="skill-percent">65%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
+          </div>
+        </div>
+      </section>
 
-<div class="skills">
+      <section class="section">
+        <h2>Werkervaring</h2>
 
-  <div class="skill">
-    <div class="skill-header"><span>Linux</span><span class="skill-percent">90%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
-  </div>
-    <div class="skill">
-    <div class="skill-header"><span>Ansible</span><span class="skill-percent">85%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-header"><span>Docker</span><span class="skill-percent">80%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
-  </div>
-    <div class="skill">
-    <div class="skill-header"><span>Linux Hardening</span><span class="skill-percent">75%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:75%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-header"><span>Windows Server</span><span class="skill-percent">85%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-header"><span>Active Directory / Azure AD</span><span class="skill-percent">85%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
-  </div>
-   <div class="skill">
-    <div class="skill-header"><span>SQL</span><span class="skill-percent">60%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
-  </div>
-    <div class="skill">
-    <div class="skill-header"><span>3 Tier administration</span><span class="skill-percent">85%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-header"><span>VMware</span><span class="skill-percent">80%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
-  </div>
-    <div class="skill">
-    <div class="skill-header"><span>Hyper-V</span><span class="skill-percent">70%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-header"><span>Proxmox</span><span class="skill-percent">75%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
-  </div>
-
-
-
-
-  <div class="skill">
-    <div class="skill-header"><span>Python</span><span class="skill-percent">75%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
-  </div>
-    <div class="skill">
-    <div class="skill-header"><span>C#</span><span class="skill-percent">55%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:55%"></div></div>
-  </div>
-
-
-  <div class="skill">
-    <div class="skill-header"><span>PowerShell</span><span class="skill-percent">75%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:45%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-header"><span>NetBox</span><span class="skill-percent">70%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-header"><span>Storage (VNX, PowerStore)</span><span class="skill-percent">70%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-header"><span>Zero Trust</span><span class="skill-percent">65%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
-  </div>
-
-
-
-  <div class="skill">
-    <div class="skill-header"><span>Office 365</span><span class="skill-percent">80%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
-  </div>
-
-
-  <div class="skill">
-    <div class="skill-header"><span>SharePoint</span><span class="skill-percent">65%</span></div>
-    <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
-  </div>
-
-</div>    
-</section>
-
-    <section class="section">
-      <h2>Werkervaring</h2>
-
-      <div class="job">
-        <div class="job-title">System Engineer — Van Marcke</div>
-        <div class="job-period">Augustus 2023 — heden</div>
-        <ul>
-          <li>Onderhoud en beheer van datacenters</li>
-          <li>Automatisering van infrastructuur met Ansible</li>
-          <li>Tooling met Python, NetBox en Ansible</li>
-          <li>Standaardisatie van VM-installaties (Linux & Windows)</li>
-          <li>Beheer van VMware & Proxmox</li>
-          <li>Containerisatie met Docker</li>
-          <li>Cybersecurity: Zero Trust, 3-tier administration, Linux hardening</li>
-          <li>Storage beheer (VNX, PowerStore)</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <div class="job-title">System Engineer — Biopack BV, Gistel</div>
-        <div class="job-period">Januari 2016 — Augustus 2023</div>
-        <ul>
-          <li>Interne IT support</li>
-          <li>Ontwikkelen van interne tools (SAP Business One)</li>
-          <li>Netwerkbeheer (AD, DNS, DHCP, DFS, Office 365, Azure AD)</li>
-          <li>Webservers & patching</li>
-          <li>Ticketing, documentatie en asset management</li>
-          <li>VOIP (3CX)</li>
-          <li>Optimalisatie IT security</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <div class="job-title">IT Manager — R&G Management, Brugge</div>
-        <div class="job-period">Juni 2015 — December 2015</div>
-        <ul>
-          <li>Interne ondersteuning</li>
-          <li>Ontwikkeling softwareoplossingen</li>
-          <li>Helpdesk</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <div class="job-title">Internal IT — Media Markt, Brugge</div>
-        <div class="job-period">April 2015 — Juni 2015</div>
-        <ul>
-          <li>Interne en externe IT support</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <div class="job-title">IT Consultant — Komma Board, Mechelen</div>
-        <div class="job-period">Juni 2014 — Oktober 2014</div>
-        <ul>
-          <li>Remote support AZ Sint-Jan Brugge</li>
-          <li>Nieuwe installaties</li>
-          <li>User provisioning</li>
-          <li>Asset management</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Opleiding</h2>
-      <ul>
-        <li>Kantooradministratie & Gegevensbeheer — Ensor Instituut (2007–2011)</li>
-        <li>Toegepaste Informatica & Netwerkbeheer — Howest (2011–2013, niet voltooid)</li>
-      </ul>
-    </section>
-
-    <secition class="section">
-      <h2>Hobby</h2>
-      <ul>
-        <li>IT Support: Radio Noordzee105FM</li>
+        <div class="job">
+          <div class="job-title">System Engineer — Van Marcke</div>
+          <div class="job-period">Augustus 2023 — heden</div>
           <ul>
-            <li>Linux: Site 2 site vpn tussen vershillende zendlocaties en radiomast en cloud server</li>
-            <li>Linux: Security audits en patching</li>
-            <li>Linux: Vernieuwing van SSL certificaten</li>
-            <li>Linux: Configuratie nieuwe componenten(Apache,Php,Mysql,DAB,Letencrypt,Fail2ban,icecast...)</li>
-            <li>Patching: zendlocaties (windows)</li>
-            <li>Scripting: php script voor uitlezen trackinfor voor webplayer en rapportage naar mysql voor SABAM</li>
-            <li></li>
+            <li>Onderhoud en beheer van datacenters</li>
+            <li>Automatisering van infrastructuur met Ansible</li>
+            <li>Tooling met Python, NetBox en Ansible</li>
+            <li>Standaardisatie van VM-installaties (Linux & Windows)</li>
+            <li>Beheer van VMware & Proxmox</li>
+            <li>Containerisatie met Docker</li>
+            <li>Cybersecurity: Zero Trust, 3-tier administration, Linux hardening</li>
+            <li>Storage beheer (VNX, PowerStore)</li>
           </ul>
-        <li>Muziek Luisteren</li>
-        <li>Gaming</li>
-        <li>Fitness</li>
-      </ul>
-    </secition>
+        </div>
 
-    <section class="section">
-      <h2>Talen</h2>
-      <ul>
-        <li>Nederlands</li>
-        <li>Engels</li>
-        <li>Frans</li>
-      </ul>
-    </section>
+        <div class="job">
+          <div class="job-title">System Engineer — Biopack BV, Gistel</div>
+          <div class="job-period">Januari 2016 — Augustus 2023</div>
+          <ul>
+            <li>Interne IT support</li>
+            <li>Ontwikkelen van interne tools (SAP Business One)</li>
+            <li>Netwerkbeheer (AD, DNS, DHCP, DFS, Office 365, Azure AD)</li>
+            <li>Webservers & patching</li>
+            <li>Ticketing, documentatie en asset management</li>
+            <li>VOIP (3CX)</li>
+            <li>Optimalisatie IT security</li>
+          </ul>
+        </div>
 
-    <section class="section">
-      <h2>Cursussen</h2>
-      <ul>
-        <li>3CX Basic Certified Engineer (2018)</li>
-        <li>Magento2 Basic Developer (2022)</li>
-      </ul>
-    </section>
-    <a href="cv.pdf" download class="download-btn">
-      Download CV
-    </a>
+        <div class="job">
+          <div class="job-title">IT Manager — R&G Management, Brugge</div>
+          <div class="job-period">Juni 2015 — December 2015</div>
+          <ul>
+            <li>Interne ondersteuning</li>
+            <li>Ontwikkeling softwareoplossingen</li>
+            <li>Helpdesk</li>
+          </ul>
+        </div>
 
-    <footer>
-      © <script>document.write(new Date().getFullYear())</script> Alain Seys
-    </footer>
+        <div class="job">
+          <div class="job-title">Internal IT — Media Markt, Brugge</div>
+          <div class="job-period">April 2015 — Juni 2015</div>
+          <ul>
+            <li>Interne en externe IT support</li>
+          </ul>
+        </div>
 
+        <div class="job">
+          <div class="job-title">IT Consultant — Komma Board, Mechelen</div>
+          <div class="job-period">Juni 2014 — Oktober 2014</div>
+          <ul>
+            <li>Remote support AZ Sint-Jan Brugge</li>
+            <li>Nieuwe installaties</li>
+            <li>User provisioning</li>
+            <li>Asset management</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Opleiding</h2>
+        <ul>
+          <li>Kantooradministratie & Gegevensbeheer — Ensor Instituut (2007–2011)</li>
+          <li>Toegepaste Informatica & Netwerkbeheer — Howest (2011–2013, niet voltooid)</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Hobby</h2>
+        <ul>
+          <li>IT Support: Radio Noordzee105FM
+            <ul>
+              <li>Linux: Site 2 site vpn tussen verschillende zendlocaties en radiomast en cloud server</li>
+              <li>Linux: Security audits en patching</li>
+              <li>Linux: Vernieuwing van SSL certificaten</li>
+              <li>Linux: Configuratie nieuwe componenten (Apache, Php, Mysql, DAB, Letencrypt, Fail2ban, icecast...)</li>
+              <li>Patching: zendlocaties (windows)</li>
+              <li>Scripting: php script voor uitlezen trackinfor voor webplayer en rapportage naar mysql voor SABAM</li>
+            </ul>
+          </li>
+          <li>Muziek Luisteren</li>
+          <li>Gaming</li>
+          <li>Fitness</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Talen</h2>
+        <ul>
+          <li>Nederlands</li>
+          <li>Engels</li>
+          <li>Frans</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Cursussen</h2>
+        <ul>
+          <li>3CX Basic Certified Engineer (2018)</li>
+          <li>Magento2 Basic Developer (2022)</li>
+        </ul>
+      </section>
+      
+      <a href="cv.pdf" download class="download-btn">Download CV</a>
+
+      <footer>
+        © <script>document.write(new Date().getFullYear())</script> Alain Seys
+      </footer>
+    </div>
+
+    <!-- English Version -->
+    <div id="english-content" class="lang-en">
+      <header>
+        <img src="images/1751295986101.jpg" height="200" width="175" alt="Alain Seys">
+        <h1>Alain Seys</h1>
+        <div class="subtitle">Systems Engineer</div>
+
+        <div class="contact">
+          Zarren, Belgium · +32 470 38 02 64 ·
+          <a href="mailto:alain.seys@outlook.com">alain.seys@outlook.com</a> ·
+          <a href="https://www.linkedin.com/in/alainseys/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="contact">
+          Single · Daughter 8 Years · Driver's License B
+        </div>
+      </header>
+
+      <section class="section">
+        <h2>Profile</h2>
+        <p>
+          IT/System Engineer with a strong passion for infrastructure, automation, and security.
+          Extensive experience with Linux, Windows, and virtualization environments, focusing on standardization,
+          tooling, and modern DevOps principles. Driven to make environments scalable, secure, and maintainable.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-header"><span>Linux</span><span class="skill-percent">90%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Ansible</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Docker</span><span class="skill-percent">80%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Linux Hardening</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:75%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Windows Server</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Active Directory / Azure AD</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>SQL</span><span class="skill-percent">60%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>3 Tier Administration</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>VMware</span><span class="skill-percent">80%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Hyper-V</span><span class="skill-percent">70%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Proxmox</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Python</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>C#</span><span class="skill-percent">55%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:55%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>PowerShell</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:45%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>NetBox</span><span class="skill-percent">70%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Storage (VNX, PowerStore)</span><span class="skill-percent">70%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Zero Trust</span><span class="skill-percent">65%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Office 365</span><span class="skill-percent">80%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>SharePoint</span><span class="skill-percent">65%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Work Experience</h2>
+
+        <div class="job">
+          <div class="job-title">System Engineer — Van Marcke</div>
+          <div class="job-period">August 2023 — Present</div>
+          <ul>
+            <li>Maintenance and management of datacenters</li>
+            <li>Infrastructure automation with Ansible</li>
+            <li>Tooling with Python, NetBox, and Ansible</li>
+            <li>Standardization of VM installations (Linux & Windows)</li>
+            <li>Management of VMware & Proxmox</li>
+            <li>Containerization with Docker</li>
+            <li>Cybersecurity: Zero Trust, 3-tier administration, Linux hardening</li>
+            <li>Storage management (VNX, PowerStore)</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-title">System Engineer — Biopack BV, Gistel</div>
+          <div class="job-period">January 2016 — August 2023</div>
+          <ul>
+            <li>Internal IT support</li>
+            <li>Development of internal tools (SAP Business One)</li>
+            <li>Network management (AD, DNS, DHCP, DFS, Office 365, Azure AD)</li>
+            <li>Web servers & patching</li>
+            <li>Ticketing, documentation and asset management</li>
+            <li>VOIP (3CX)</li>
+            <li>IT security optimization</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-title">IT Manager — R&G Management, Bruges</div>
+          <div class="job-period">June 2015 — December 2015</div>
+          <ul>
+            <li>Internal support</li>
+            <li>Development of software solutions</li>
+            <li>Helpdesk</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-title">Internal IT — Media Markt, Bruges</div>
+          <div class="job-period">April 2015 — June 2015</div>
+          <ul>
+            <li>Internal and external IT support</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-title">IT Consultant — Komma Board, Mechelen</div>
+          <div class="job-period">June 2014 — October 2014</div>
+          <ul>
+            <li>Remote support AZ Sint-Jan Bruges</li>
+            <li>New installations</li>
+            <li>User provisioning</li>
+            <li>Asset management</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <ul>
+          <li>Office Administration & Data Management — Ensor Instituut (2007–2011)</li>
+          <li>Applied Computer Science & Network Management — Howest (2011–2013, not completed)</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>IT Support: Radio Noordzee105FM
+            <ul>
+              <li>Linux: Site to site VPN between different broadcast locations and radio mast and cloud server</li>
+              <li>Linux: Security audits and patching</li>
+              <li>Linux: Renewal of SSL certificates</li>
+              <li>Linux: Configuration of new components (Apache, PHP, MySQL, DAB, Let's Encrypt, Fail2ban, Icecast...)</li>
+              <li>Patching: Broadcast locations (Windows)</li>
+              <li>Scripting: PHP script for reading track info for webplayer and reporting to MySQL for SABAM</li>
+            </ul>
+          </li>
+          <li>Listening to Music</li>
+          <li>Gaming</li>
+          <li>Fitness</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Languages</h2>
+        <ul>
+          <li>Dutch</li>
+          <li>English</li>
+          <li>French</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Courses</h2>
+        <ul>
+          <li>3CX Basic Certified Engineer (2018)</li>
+          <li>Magento2 Basic Developer (2022)</li>
+        </ul>
+      </section>
+      
+      <a href="cv.pdf" download class="download-btn">Download CV</a>
+
+      <footer>
+        © <script>document.write(new Date().getFullYear())</script> Alain Seys
+      </footer>
+    </div>
   </div>
+  <script src="js/language.js"></script>
+
 </body>
 </html>

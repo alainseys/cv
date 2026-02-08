@@ -1,136 +1,221 @@
-    .skill {
-      margin-bottom: 10px;
-    }
-
-
-  .skill-name {
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-  }
-
-
-  .skill-bar {
-    background: #eef2f7;
-    border-radius: 6px;
-    height: 8px;
-    overflow: hidden;
-  }
-  .skill-header {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-  }
-  .skill-percent {
-    color: #666;
-  }
-
-
-  .skill-level {
-    height: 100%;
-    background: #4f7cff;
-    border-radius: 6px;
-    transition: width 1s ease;
-  }
-    body {
+    * {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-      line-height: 1.6;
+      padding: 0;
+      box-sizing: border-box;
     }
-
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f7fa;
+      padding: 20px;
+    }
+    
     .container {
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 0 auto;
+      background-color: white;
       padding: 40px;
-      background: white;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
-
+    
+    /* Language selector */
+    .language-selector {
+      text-align: right;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .language-dropdown {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f8f9fa;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .language-dropdown:hover {
+      background-color: #e9ecef;
+    }
+    
+    /* Header styles */
     header {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
+      text-align: center;
       margin-bottom: 30px;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 25px;
     }
-
+    
+    header img {
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+    }
+    
     h1 {
-      margin: 0;
-      font-size: 2.2rem;
+      color: #2c3e50;
+      font-size: 36px;
+      margin-bottom: 5px;
     }
-
-    h2 {
-      margin-top: 40px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 6px;
-    }
-
+    
     .subtitle {
-      color: #555;
-      font-size: 1.1rem;
+      font-size: 20px;
+      color: #3498db;
+      margin-bottom: 15px;
+      font-weight: 500;
     }
-
+    
     .contact {
-      color: #444;
-      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #555;
     }
-
+    
     .contact a {
-      color: inherit;
+      color: #2980b9;
       text-decoration: none;
     }
-
+    
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Section styles */
     .section {
-      margin-top: 25px;
+      margin-bottom: 30px;
     }
-
+    
+    h2 {
+      color: #2c3e50;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    
+    p, li {
+      color: #444;
+    }
+    
     ul {
-      padding-left: 18px;
+      padding-left: 20px;
     }
-
+    
     li {
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
-
-    .job {
-      margin-bottom: 25px;
-    }
-
-    .job-title {
-      font-weight: 600;
-    }
-
-    .job-period {
-      color: #666;
-      font-size: 0.9rem;
-    }
-
+    
+    /* Skills section */
     .skills {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 8px 20px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
     }
-
-    .tag {
-      background: #eef2f7;
-      padding: 6px 10px;
-      border-radius: 6px;
-      font-size: 0.9rem;
+    
+    .skill {
+      margin-bottom: 15px;
+    }
+    
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    
+    .skill-bar {
+      height: 8px;
+      background-color: #ecf0f1;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .skill-level {
+      height: 100%;
+      background-color: #3498db;
+    }
+    
+    .skill-percent {
+      color: #7f8c8d;
+      font-size: 14px;
+    }
+    
+    /* Job styles */
+    .job {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .job:last-child {
+      border-bottom: none;
+    }
+    
+    .job-title {
+      font-weight: 600;
+      color: #2c3e50;
+      font-size: 18px;
+    }
+    
+    .job-period {
+      color: #7f8c8d;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    
+    /* Download button */
+    .download-btn {
       display: inline-block;
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      margin: 20px 0;
+      transition: background-color 0.3s;
     }
-
+    
+    .download-btn:hover {
+      background-color: #2980b9;
+    }
+    
+    /* Footer */
     footer {
-      margin-top: 40px;
       text-align: center;
-      font-size: 0.85rem;
-      color: #777;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      color: #7f8c8d;
+      font-size: 14px;
     }
-
-    @media (max-width: 600px) {
+    
+    /* Hidden content */
+    .lang-nl { display: block; }
+    .lang-en { display: none; }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
       .container {
-        margin: 0;
-        border-radius: 0;
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 28px;
+      }
+      
+      .subtitle {
+        font-size: 18px;
+      }
+      
+      .skills {
+        grid-template-columns: 1fr;
+      }
+      
+      .language-selector {
+        text-align: center;
       }
     }
