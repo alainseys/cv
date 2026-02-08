@@ -219,3 +219,56 @@
         text-align: center;
       }
     }
+
+/* Floating download button */
+.floating-download-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.floating-download-btn span {
+    position: absolute;
+    width: max-content;
+    right: 70px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px 15px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.floating-download-btn:hover {
+    width: 200px;
+    border-radius: 50px;
+    transform: scale(1.1);
+}
+
+.floating-download-btn:hover span {
+    opacity: 1;
+    right: 20px;
+}
+
+/* Optional: Add animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.floating-download-btn {
+    animation: float 3s ease-in-out infinite;
+}
