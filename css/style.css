@@ -1,0 +1,274 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f7fa;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    
+    /* Language selector */
+    .language-selector {
+      text-align: right;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .language-dropdown {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f8f9fa;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .language-dropdown:hover {
+      background-color: #e9ecef;
+    }
+    
+    /* Header styles */
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 25px;
+    }
+    
+    header img {
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+    }
+    
+    h1 {
+      color: #2c3e50;
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+    
+    .subtitle {
+      font-size: 20px;
+      color: #3498db;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    
+    .contact {
+      margin-bottom: 8px;
+      color: #555;
+    }
+    
+    .contact a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Section styles */
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    h2 {
+      color: #2c3e50;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    
+    p, li {
+      color: #444;
+    }
+    
+    ul {
+      padding-left: 20px;
+    }
+    
+    li {
+      margin-bottom: 5px;
+    }
+    
+    /* Skills section */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
+    }
+    
+    .skill {
+      margin-bottom: 15px;
+    }
+    
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    
+    .skill-bar {
+      height: 8px;
+      background-color: #ecf0f1;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .skill-level {
+      height: 100%;
+      background-color: #3498db;
+    }
+    
+    .skill-percent {
+      color: #7f8c8d;
+      font-size: 14px;
+    }
+    
+    /* Job styles */
+    .job {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .job:last-child {
+      border-bottom: none;
+    }
+    
+    .job-title {
+      font-weight: 600;
+      color: #2c3e50;
+      font-size: 18px;
+    }
+    
+    .job-period {
+      color: #7f8c8d;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    
+    /* Download button */
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      margin: 20px 0;
+      transition: background-color 0.3s;
+    }
+    
+    .download-btn:hover {
+      background-color: #2980b9;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      color: #7f8c8d;
+      font-size: 14px;
+    }
+    
+    /* Hidden content */
+    .lang-nl { display: block; }
+    .lang-en { display: none; }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 28px;
+      }
+      
+      .subtitle {
+        font-size: 18px;
+      }
+      
+      .skills {
+        grid-template-columns: 1fr;
+      }
+      
+      .language-selector {
+        text-align: center;
+      }
+    }
+
+/* Floating download button */
+.floating-download-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.floating-download-btn span {
+    position: absolute;
+    width: max-content;
+    right: 70px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px 15px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.floating-download-btn:hover {
+    width: 200px;
+    border-radius: 50px;
+    transform: scale(1.1);
+}
+
+.floating-download-btn:hover span {
+    opacity: 1;
+    right: 20px;
+}
+
+/* Optional: Add animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.floating-download-btn {
+    animation: float 3s ease-in-out infinite;
+}
