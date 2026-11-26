@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer");
-const fs = require("fs");
+const path = require("path");
+const { pathToFileURL } = require("url");
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -7,78 +8,39 @@ const fs = require("fs");
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
   });
 
-  const page = await browser.newPage();
+  try {
+    const page = await browser.newPage();
+    const indexUrl = pathToFileURL(path.join(process.cwd(), "index.html")).href;
 
-  // Generate Dutch CV
-  await page.goto("file://" + process.cwd() + "/index.html", {
-    waitUntil: "networkidle0"
-  });
+    await page.goto(indexUrl, { waitUntil: "networkidle0" });
+    await page.emulateMediaType("print");
+    await page.evaluateHandle("document.fonts.ready");
 
-  // Set language to Dutch before generating PDF
-  await page.evaluate(() => {
-    document.getElementById('languageSelect').value = 'nl';
-    const event = new Event('change');
-    document.getElementById('languageSelect').dispatchEvent(event);
-  });
+    async function generatePdf(language, outputPath) {
+      await page.select("#languageSelect", language);
 
-  // Wait for content to switch - use waitForFunction instead of waitForTimeout
-  await page.waitForFunction(() => {
-    const dutchContent = document.getElementById('dutch-content');
-    const englishContent = document.getElementById('english-content');
-    return dutchContent.style.display === 'block' && englishContent.style.display === 'none';
-  }, { timeout: 5000 });
+      await page.waitForFunction((selectedLanguage) => {
+        const nl = document.getElementById("dutch-content");
+        const en = document.getElementById("english-content");
+        return selectedLanguage === "nl"
+          ? getComputedStyle(nl).display !== "none" && getComputedStyle(en).display === "none"
+          : getComputedStyle(nl).display === "none" && getComputedStyle(en).display !== "none";
+      }, {}, language);
 
-  // Use setTimeout wrapped in page.evaluate for delay
-  await page.evaluate(() => {
-    return new Promise(resolve => setTimeout(resolve, 500));
-  });
+      await page.pdf({
+        path: outputPath,
+        format: "A4",
+        printBackground: true,
+        preferCSSPageSize: true,
+        margin: { top: "0", bottom: "0", left: "0", right: "0" }
+      });
 
-  await page.pdf({
-    path: "cv-nl.pdf",
-    format: "A4",
-    printBackground: true,
-    margin: {
-      top: "20mm",
-      bottom: "20mm",
-      left: "15mm",
-      right: "15mm"
+      console.log(`${outputPath} generated`);
     }
-  });
 
-  console.log("Dutch PDF generated");
-
-  // Generate English CV
-  await page.evaluate(() => {
-    document.getElementById('languageSelect').value = 'en';
-    const event = new Event('change');
-    document.getElementById('languageSelect').dispatchEvent(event);
-  });
-
-  // Wait for content to switch
-  await page.waitForFunction(() => {
-    const dutchContent = document.getElementById('dutch-content');
-    const englishContent = document.getElementById('english-content');
-    return dutchContent.style.display === 'none' && englishContent.style.display === 'block';
-  }, { timeout: 5000 });
-
-  // Use setTimeout wrapped in page.evaluate for delay
-  await page.evaluate(() => {
-    return new Promise(resolve => setTimeout(resolve, 500));
-  });
-
-  await page.pdf({
-    path: "cv-en.pdf",
-    format: "A4",
-    printBackground: true,
-    margin: {
-      top: "20mm",
-      bottom: "20mm",
-      left: "15mm",
-      right: "15mm"
-    }
-  });
-
-  console.log("English PDF generated");
-
-  await browser.close();
+    await generatePdf("nl", "cv-nl.pdf");
+    await generatePdf("en", "cv-en.pdf");
+  } finally {
+    await browser.close();
+  }
 })();
